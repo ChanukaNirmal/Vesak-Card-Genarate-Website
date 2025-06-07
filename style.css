@@ -121,22 +121,7 @@ h1 {
   padding: 15px;
 }
 
-/* .card-text {
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.7);
-  border: 2px dashed #3498db;
-  border-radius: 8px;
-  padding: 20px;
-  width: 90%;
-}
-
-.card-text p {
-  font-size: 18px;
-  color: #2c3e50;
-  font-weight: bold;
-  margin: 8px 0;
-  word-wrap: break-word;
-} */
+/*  */
 
 button#sendButton,
 button#createNewButton {
