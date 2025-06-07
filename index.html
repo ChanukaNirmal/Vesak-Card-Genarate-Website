@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vesak Card Creator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>ඔබගේ වෙසක් කාඩ්පත නිර්මාණය කරන්න</h1>
+
+    <div class="image-selector">
+      <label for="cardImage">රූපයක් තෝරන්න:</label>
+      <div class="image-grid" id="imageGrid">
+        <!-- රූප 50ක් මෙහි load වේ -->
+      </div>
+    </div>
+
+    <div class="text-inputs">
+      <input type="text" id="text1" placeholder="යවන්නාගේ නම" />
+      <input type="text" id="text2" placeholder="ලබන්නාගේ නම" />
+    </div>
+
+    <div class="card-prev3iew">
+      <div class="flip-card" id="flipCard">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img id="previewImage" src="images/card1.jpg" alt="Card Front" />
+          </div>
+          <div class="flip-card-back">
+            <div class="card-text">
+              <p id="overlayText1">යවන්නාගේ නම</p>
+              <p id="overlayText2">ලබන්නාගේ නම</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button id="sendButton">Send</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
