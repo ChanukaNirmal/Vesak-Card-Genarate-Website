@@ -11,41 +11,40 @@
     <h1>ඔබගේ වෙසක් කාඩ්පත</h1>
 
     <div class="card-preview">
-      <div class="flip-card flipped" id="flipCard">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <img id="finalImage" src="" alt="Card Front" />
-          </div>
-          <div class="flip-card-back">
-            <div class="card-text">
-              <p id="finalText1"></p>
-              <p id="finalText2"></p>
-            </div>
-          </div>
+  <div class="flip-card flipped" id="flipCard">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img id="finalImage" src="" alt="Card Front" />
+      </div>
+      <div class="flip-card-back">
+        <div class="card-text">
+          <p id="finalText1"></p>
+          <p id="finalText2"></p>
         </div>
       </div>
     </div>
-
-    <button id="createNewButton">Create New Card</button>
   </div>
+</div>
+<button id="createNewButton">Create New Card</button>
 
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const imageSrc = params.get('image');
-    const text1 = params.get('text1');
-    const text2 = params.get('text2');
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const imageSrc = params.get('image');
+  const text1 = params.get('text1');
+  const text2 = params.get('text2');
 
-    document.getElementById('finalImage').src = imageSrc;
-    document.getElementById('finalText1').textContent = text1 ? `${text1} විසින්` : '';
-    document.getElementById('finalText2').textContent = text2 ? `${text2} වෙත` : '';
+  document.getElementById('finalImage').src = imageSrc;
+  document.getElementById('finalText1').textContent = text1 ? `${text1} විසින්` : '';
+  document.getElementById('finalText2').textContent = text2 ? `${text2} වෙත` : '';
 
-    document.getElementById('flipCard').addEventListener('click', () => {
-      document.getElementById('flipCard').classList.toggle('flipped');
-    });
+  const flipCardBack = document.getElementById('flipCard');
+  flipCardBack.addEventListener('click', () => {
+    flipCardBack.classList.toggle('flipped');
+  });
 
-    document.getElementById('createNewButton').addEventListener('click', () => {
-      window.location.href = 'index.html';
-    });
-  </script>
+  document.getElementById('createNewButton')
+    .addEventListener('click', () => window.location.href = 'index.html');
+</script>
+
 </body>
 </html>
